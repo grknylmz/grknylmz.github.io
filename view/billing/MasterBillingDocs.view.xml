@@ -1,0 +1,69 @@
+<core:View displayBlock="true" height="100%" controllerName="ems.UI5Showcase.controller.billing.MasterBillingDocs" 
+    xmlns="sap.m" 
+    xmlns:f="sap.f" 
+    xmlns:core="sap.ui.core">
+
+    <f:DynamicPage id="dynamicPageId" toggleHeaderOnTitleClick="false">
+        <!-- DynamicPage Title -->
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="{i18n>billingDocumentTitle}"/>
+                </f:heading>
+
+                <f:actions>
+                    <ToggleButton text="{i18n>createDocument}" type="Emphasized" press="onCreateDocument"/>
+                </f:actions>
+            </f:DynamicPageTitle>
+        </f:title>
+        <!-- DynamicPage Content -->
+        <f:content>
+            <VBox fitContainer="true">
+                <OverflowToolbar class="sapFDynamicPageAlignContent">
+                    <ToolbarSpacer/>
+                    <SearchField search="onSearch" width="17.5rem"/>
+                    <OverflowToolbarButton icon="sap-icon://sort" text="Sort" type="Transparent" press="onSort"/>
+                </OverflowToolbar>
+                <Table id="docsTable" inset="false" items="{
+							path: 'billing>/BillingDocCollection',
+							sorter: {
+								path: 'BillDoc'
+							}
+						}" class="sapFDynamicPageAlignContent" width="auto">
+                    <columns>
+                        <Column width="12em">
+                            <Text text="Billing Document" />
+                        </Column>
+                        <Column hAlign="End">
+                            <Text text="Net Value" />
+                        </Column>
+
+                    </columns>
+                    <items>
+                        <ColumnListItem type="Navigation" press="onListItemPress">
+                            <cells>
+                                <ObjectIdentifier title="{billing>BillDoc}" text="{billing>BillType}" />
+                                <ObjectNumber number="{
+								parts:[{path:'billing>NetValue'},{path:'billing>Currency'}],
+								type: 'sap.ui.model.type.Currency',
+								formatOptions: {showMeasure: false}
+							}" unit="{billing>Currency}" />
+
+
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+        </f:content>
+
+        <!-- DynamicPage Footer -->
+        <f:footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button type="Accept" text="Accept"/>
+                <Button type="Reject" text="Reject"/>
+            </OverflowToolbar>
+        </f:footer>
+    </f:DynamicPage>
+</core:View>

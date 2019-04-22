@@ -1,0 +1,28 @@
+{
+  "name": "grknylmz.github.io",
+  "version": "1.0.0",
+  "description": "Showcase App",
+  "main": "index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "browser-sync start -s -f . --no-notify --host localhost --port 9000",
+    "prod": "browser-sync start -s \"dist/\" -f . --no-notify --host localhost --port 9000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grknylmz/grknylmz.github.io.git"
+  },
+  "keywords": [
+    "ui5",
+    "sapui5",
+    "openui5"
+  ],
+  "author": "Yonca Coskun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grknylmz/grknylmz.github.io/issues"
+  },
+  "homepage": "https://github.com/grknylmz/grknylmz.github.io#readme"
+}

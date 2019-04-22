@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="UTF-8">
+
+	<title>UI5 Apps Showcase</title>
+
+	<!-- Load Firebase Library Asynchronously , it will create global Firebase Instance-->
+	<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js" async></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-firestore.js" async></script>
+	<!-- Load UI5 Library -->
+	<script id="
+	 sap-ui-bootstrap" src="https://ui5.sap.com/resources/sap-ui-core.js" data-sap-ui-libs="sap.m,sap.f,sap.uxap, sap.ui.layout"
+	 data-sap-ui-theme="sap_belize" data-sap-ui-preload="async" data-sap-ui-bindingSyntax="complex"
+	 data-sap-ui-compatVersion="edge" data-sap-ui-resourceroots='{"ems.UI5Showcase": "./"}'>
+	</script>
+
+
+	<script>
+		sap.ui.getCore().attachInit(function () {
+			new sap.m.Shell({
+				app: new sap.ui.core.ComponentContainer({
+					height: "100%",
+					name: "ems.UI5Showcase"
+				})
+			}).placeAt("content");
+		});
+	</script>
+</head>
+
+<body class="sapUiBody" id="content">
+</body>
+
+</html>

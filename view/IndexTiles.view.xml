@@ -1,0 +1,78 @@
+<core:View xmlns="sap.m" 
+	xmlns:uxap="sap.uxap" 
+	xmlns:form="sap.ui.layout.form" 
+	xmlns:layout="sap.ui.layout" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:semantic="sap.m.semantic" 
+	xmlns:core="sap.ui.core" 
+	xmlns:footerbar="sap.ushell.ui.footerbar" 
+	xmlns:unified="sap.ui.unified" controllerName="ems.UI5Showcase.controller.IndexTiles">
+	<Page title="UI5 Apps Showcase">
+		<content>
+			<uxap:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false" isChildPage="false" showHeaderContent="true">
+				<uxap:headerTitle>
+					<uxap:ObjectPageHeader objectTitle="{ContractNumber}" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true">
+						<uxap:actions>
+							<uxap:ObjectPageHeaderActionButton icon="sap-icon://calendar" press="handlePopoverPress"/>
+							<uxap:ObjectPageHeaderActionButton icon="sap-icon://sys-help" press="onPressHelp"/>
+						</uxap:actions>
+					</uxap:ObjectPageHeader>
+				</uxap:headerTitle>
+
+				<uxap:headerContent >
+					<!-- Developer Profile -->
+					<TileContainer class="launchpad-margin-left" id="launchpadContainerDE" height="11rem">
+						<tiles>
+							<StandardTile id="DE1" icon="sap-icon://leads" title="{i18n>devResume}" press="onDevResume" />
+						</tiles>
+					</TileContainer>
+					<!-- Admin -->
+					<TileContainer class="launchpad-margin-left" id="launchpadContainerBA1" height="11rem">
+						<tiles>
+							<StandardTile id="BA1" icon="sap-icon://key-user-settings" title="{i18n>businessAdministration}" press="onPressbusinessAdministration" />
+							<StandardTile id="BA2" icon="sap-icon://add-photo" title="{i18n>barcodeScanner}" press="onNavBarcodeScanner" />
+							<StandardTile id="BA3" icon="sap-icon://signature" title="{i18n>signaturePad}" press="onNavSignaturePad" />
+							<StandardTile id="BA4" icon="sap-icon://message-popup" title="{i18n>messenger}" press="onNavMessenger" />
+							<StandardTile id="BA5" title="File Process" press="onNavFile" />
+						</tiles>
+
+					</TileContainer>
+					<!-- Business Transactions -->
+					<Label id="lpGroupHeaderS" text="{i18n>businessTransaction}" class="launchpad-groupHeader" width="100%" />
+					<TileContainer class="launchpad-margin-left" id="launchpadContainer1" height="11rem">
+						<tiles>
+							<StandardTile id="BT1" icon="sap-icon://accounting-document-verification" title="{i18n>billingDocuments}" press="onBillingDocsPress" />
+							<StandardTile id="BT2" icon="sap-icon://expense-report" title="{i18n>glAccount}" press="toPressGeneralLedgerAccounts" />
+							<StandardTile id="BT3" icon="sap-icon://customer-financial-fact-sheet" title="{i18n>debitor}" press="toPressDebitor" />
+							<StandardTile id="BT4" icon="sap-icon://capital-projects" title="{i18n>costCenters}" press="toPressCostCenter" />
+						</tiles>
+					</TileContainer>
+
+					<!-- Master Data -->
+					<Label id="lpGroupHeaderR" text="{i18n>masterDataApp}" class="launchpad-groupHeader" width="100%" />
+					<TileContainer class="launchpad-margin-left" id="launchpadContainer2" height="11rem">
+						<tiles>
+							<StandardTile id="MD1" icon="sap-icon://activity-individual" title="{i18n>vendorCentral}" press="onVendorTilePress" />
+							<StandardTile id="MD2" icon="sap-icon://customer" title="{i18n>customerCentral}" press="toPressCustomers" />
+							<StandardTile id="MD3" icon="sap-icon://building" title="{i18n>companyCentral}" press="toPressCompanies" />
+							<StandardTile id="MD4" icon="sap-icon://business-card" title="{i18n>businessPartnerCentral}" press="toPressBusinessPartners" />
+							<StandardTile id="MD5" icon="sap-icon://loan" title="{i18n>bankCentral}" press="toPressBanks" />
+							<StandardTile id="MD6" icon="sap-icon://add-equipment" title="{i18n>equipments}" press="toPressEquipments" />
+						</tiles>
+					</TileContainer>
+
+					<!-- HR APPS -->
+					<Label id="SSDDS" text="{i18n>hrApps}" class="launchpad-groupHeader" width="100%" />
+					<TileContainer class="launchpad-margin-left" height="11rem">
+						<tiles>
+							<StandardTile icon="sap-icon://employee-rejections" title="{i18n>absenceManager}" press="toPressAbsenceManager" />
+						</tiles>
+					</TileContainer>
+
+				</uxap:headerContent>
+			</uxap:ObjectPageLayout>
+
+
+		</content>
+	</Page>
+</core:View>

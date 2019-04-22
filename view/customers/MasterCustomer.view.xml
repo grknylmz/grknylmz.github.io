@@ -1,0 +1,45 @@
+<mvc:View controllerName="ems.UI5Showcase.controller.customers.MasterCustomer" 
+  xmlns="sap.m" 
+  xmlns:f="sap.f" 
+  xmlns:mvc="sap.ui.core.mvc">
+  <f:DynamicPage toggleHeaderOnTitleClick="false">
+    <!-- DynamicPage Title -->
+    <f:title>
+      <f:DynamicPageTitle>
+        <f:heading>
+          <Title text="Customer List"/>
+        </f:heading>
+      </f:DynamicPageTitle>
+    </f:title>
+    <!-- DynamicPage Content -->
+    <f:content>
+      <VBox fitContainer="true">
+        <OverflowToolbar class="sapFDynamicPageAlignContent">
+          <ToolbarSpacer/>
+          <SearchField search=".onSearch" width="17.5rem"/>
+          <OverflowToolbarButton icon="sap-icon://add" text="Add" type="Transparent" press=".onAdd"/>
+          <OverflowToolbarButton icon="sap-icon://sort" text="Sort" type="Transparent" press=".onSort"/>
+        </OverflowToolbar>
+        <Table id="customerList" inset="false" items="{
+						path: 'customer>/',
+						sorter: {
+							path: 'company'
+						}
+					}" class="sapFDynamicPageAlignContent" width="auto">
+          <columns>
+            <Column width="12em">
+              <Text text="Company"/>
+            </Column>
+          </columns>
+          <items>
+            <ColumnListItem type="Navigation" press=".onListItemPress">
+              <cells>
+                <ObjectIdentifier title="{customer>company}" text="{customer>sector}"/>
+              </cells>
+            </ColumnListItem>
+          </items>
+        </Table>
+      </VBox>
+    </f:content>
+  </f:DynamicPage>
+</mvc:View>

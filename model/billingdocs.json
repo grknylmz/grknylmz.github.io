@@ -1,0 +1,47 @@
+{
+  "BillingDocCollection": [{
+      "RefDoc": "2140003081",
+      "RefDocItem": "000010",
+      "BillDoc": "2140003298",
+      "BillDocItem": "000010",
+      "BillType": "ZIWS",
+      "BillTypeDescription": "BTDescription",
+      "BillCategory": "L",
+      "SDDocCategory": "N",
+      "SDDocCategoryDescription": "SDDocDescription",
+      "NetValue": 32776.68,
+      "TaxValue": 6555.34,
+      "Currency": "EUR",
+      "AccountStatus": "C",
+      "AccountStatusDescription": "Closed",
+      "NetValueItem": "0",
+      "TaxValueItem": "0",
+      "GroValueItem": "0",
+      "Cancelled": false,
+      "CancelledBillDc": "2140003081",
+      "SDDocCatLong": ""
+    },
+    {
+      "RefDoc": "2140003081",
+      "RefDocItem": "000010",
+      "BillDoc": "2140003299",
+      "BillDocItem": "000010",
+      "BillType": "ZIWS",
+      "BillTypeDescription": "BTDescription",
+      "BillCategory": "L",
+      "SDDocCategory": "N",
+      "SDDocCategoryDescription": "SDDocDescription",
+      "NetValue": 64417.68,
+      "TaxValue": 12883.34,
+      "Currency": "EUR",
+      "AccountStatus": "C",
+      "AccountStatusDescription": "Closed",
+      "NetValueItem": "0",
+      "TaxValueItem": "0",
+      "GroValueItem": "0",
+      "Cancelled": false,
+      "CancelledBillDc": "2140003081",
+      "SDDocCatLong": ""
+    }
+  ]
+}

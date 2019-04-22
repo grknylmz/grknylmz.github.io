@@ -1,0 +1,25 @@
+<mvc:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" controllerName="ems.UI5Showcase.controller.file.File" 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns:l="sap.ui.layout" 
+	xmlns:u="sap.ui.unified">
+	<Page title="File Upload" showNavButton="true" navButtonPress="onNavBack">
+		<l:VerticalLayout id="containerLayout" width="100%">
+			<l:BlockLayout id="BlockLayout">
+				<l:BlockLayoutRow id="row1" accentCells="Accent1">
+					<l:BlockLayoutCell id="uploader">
+						<u:FileUploader id="fileUploader" name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server" uploadComplete="handleUploadComplete"/>
+						<Button text="Upload File" press="handleUploadPress"/>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+				<l:BlockLayoutRow id="row2" accentCells="Accent1">
+					<l:BlockLayoutCell id="grid">
+						<core:HTML id="html">
+						</core:HTML>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+			</l:BlockLayout>
+		</l:VerticalLayout>
+	</Page>
+</mvc:View>

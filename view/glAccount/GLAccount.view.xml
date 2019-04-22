@@ -1,0 +1,87 @@
+<mvc:View controllerName="ems.UI5Showcase.controller.glAccount.GLAccount" 
+  xmlns="sap.m" 
+  xmlns:mvc="sap.ui.core.mvc" 
+  xmlns:semantic="sap.f.semantic">
+
+  <semantic:SemanticPage id="page" headerPinnable="false" toggleHeaderOnTitleClick="false" showFooter="true">
+
+    <semantic:titleHeading>
+      <Title text="{i18n>GLAccountTitle}" />
+    </semantic:titleHeading>
+
+    <semantic:content>
+      <IconTabBar id="iconTabBar" select="onQuickFilter" expandable="false" headerBackgroundDesign="Transparent">
+        <items>
+          <IconTabFilter key="all" showAll="true" count="{worklistView>/countAll}" text="{i18n>WorklistFilterProductsAll}"/>
+          <IconTabSeparator/>
+          <IconTabFilter key="highBalance" icon="sap-icon://message-success" iconColor="Positive" count="{worklistView>/highBalance}" text="{i18n>WorklistFilterHBalance}"/>
+          <IconTabFilter key="criticalBalance" icon="sap-icon://message-warning" iconColor="Critical" count="{worklistView>/criticalBalance}" text="{i18n>WorklistFilterCBalance}"/>
+          <IconTabFilter key="lowBalance" icon="sap-icon://message-error" iconColor="Negative" count="{worklistView>/lowBalance}" text="{i18n>WorklistFilterLBalance}"/>
+        </items>
+        <content>
+          <Table id="tableGLAccount" busyIndicatorDelay="{worklistView>/tableBusyDelay}" growing="true" growingScrollToLoad="true" noDataText="{worklistView>/tableNoDataText}" updateFinished=".onUpdateFinished" width="auto" mode="MultiSelect" items="{
+							path: 'glaccount>/',
+							sorter: {
+								path: 'name',
+								descending: false
+							},
+              parameters: { count : true }
+						}">
+            <headerToolbar>
+              <Toolbar>
+                <Title id="tableHeader" text="{worklistView>/worklistTableTitle}"/>
+                <ToolbarSpacer/>
+                <SearchField id="searchField" tooltip="{i18n>worklistSearchTooltip}" search="onSearch" width="auto">
+                </SearchField>
+              </Toolbar>
+            </headerToolbar>
+
+            <columns>
+              <Column id="companyIdColumn">
+                <Text id="nameColumnTitle" text="{i18n>TableCompanyIDColumnTitle}"/>
+              </Column>
+              <Column id="partnerColumn" demandPopin="false" minScreenWidth="Tablet">
+                <Text text="{i18n>TablePartnerColumnTitle}"/>
+              </Column>
+              <Column id="debitColumn" hAlign="End" demandPopin="true" minScreenWidth="Tablet">
+                <Text text="{i18n>TableDebitColumnTitle}"/>
+              </Column>
+              <Column id="creditColumn" demandPopin="true" minScreenWidth="Tablet" hAlign="End">
+                <Text text="{i18n>TableCreditColumnTitle}"/>
+              </Column>
+              <Column id="balanceColumn" hAlign="End">
+                <Text text="{i18n>TableBalanceColumnTitle}"/>
+              </Column>
+            </columns>
+            <items>
+              <ColumnListItem type="Navigation" press="onPress">
+                <cells>
+                  <ObjectIdentifier title="{glaccount>companyID}"/>
+                  <Text text = "{glaccount>partner}"/>
+                  <ObjectNumber unit="EUR" number="{
+										path: 'glaccount>debit',
+										formatter: '.formatter.numberUnit'}"/>
+                  <ObjectNumber number="{
+										path: 'glaccount>credit',
+										formatter: '.formatter.numberUnit'}" unit="EUR"/>
+                  <ObjectNumber number="{
+										path: 'glaccount>balance',
+										formatter: '.formatter.numberUnit'}" unit="EUR"/>
+                </cells>
+              </ColumnListItem>
+            </items>
+          </Table>
+        </content>
+      </IconTabBar>
+    </semantic:content>
+    <semantic:sendEmailAction>
+      <semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
+    </semantic:sendEmailAction>
+    <semantic:positiveAction>
+      <semantic:PositiveAction text="{i18n>TableProductsReorder}" press=".onUpdateStockObjects"/>
+    </semantic:positiveAction>
+    <semantic:negativeAction>
+      <semantic:NegativeAction text="{i18n>TablePorductsUnlist}" press=".onUnlistObjects"/>
+    </semantic:negativeAction>
+  </semantic:SemanticPage>
+</mvc:View>

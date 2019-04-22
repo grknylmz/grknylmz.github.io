@@ -1,0 +1,61 @@
+[{
+    "CategoryName": "Food",
+    "Category": "F",
+    "NumberOfProducts": 5
+  },
+  {
+    "CategoryName": "Air Transport",
+    "Category": "AT",
+    "NumberOfProducts": 1
+  },
+  {
+    "CategoryName": "Automotive",
+    "Category": "A",
+    "NumberOfProducts": 2
+  },
+  {
+    "CategoryName": "Telecom Services",
+    "Category": "TS",
+    "NumberOfProducts": 2
+  },
+  {
+    "CategoryName": "Cruise Lines",
+    "Category": "CL",
+    "NumberOfProducts": 2
+  },
+  {
+    "CategoryName": "Business Services",
+    "Category": "BS",
+    "NumberOfProducts": 2
+  },
+  {
+    "CategoryName": "Farming",
+    "Category": "FA",
+    "NumberOfProducts": 2
+  },
+  {
+    "CategoryName": "Health Service",
+    "Category": "HS",
+    "NumberOfProducts": 3
+  },
+  {
+    "CategoryName": "Marine Transport",
+    "Category": "MT",
+    "NumberOfProducts": 2
+  },
+  {
+    "CategoryName": "Payday Lenders",
+    "Category": "PL",
+    "NumberOfProducts": 2
+  },
+  {
+    "CategoryName": "Real Estate",
+    "Category": "RL",
+    "NumberOfProducts": 2
+  },
+  {
+    "CategoryName": "Sea Transport",
+    "Category": "ST",
+    "NumberOfProducts": 1
+  }
+]

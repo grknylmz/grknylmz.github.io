@@ -1,0 +1,59 @@
+<core:FragmentDefinition xmlns="sap.m" 
+  xmlns:l="sap.ui.layout" 
+  xmlns:f="sap.ui.layout.form" 
+  xmlns:core="sap.ui.core">
+  <Dialog title="{i18n>createDocument}">
+    <f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+      <f:content>
+        <Label text="Reference Document"/>
+        <Input value=""/>
+        <Label text="RefDocItem"/>
+        <Input value=""/>
+        <Label text="BillDocItem"/>
+        <Input value=""/>
+        <Label text="BillType"/>
+        <Input value=""/>
+        <Label text="BillTypeDescription"/>
+        <Input value=""/>
+        <Label text="BillCategory"/>
+        <Input value=""/>
+        <Label text="SDDocCategory"/>
+        <Input value=""/>
+        <Label text="SDDocCategoryDescription"/>
+        <Input value=""/>
+        <Label text="NetValue"/>
+        <Input value=""/>
+        <Label text="TaxValue"/>
+        <Input value=""/>
+        <Label text="Currency"/>
+        <Select id="currency" selectedKey="{Currency}">
+          <items>
+            <core:Item text="EUR" key="EUR"/>
+            <core:Item text="GBP" key="GBP"/>
+            <core:Item text="USD" key="USD"/>
+          </items>
+        </Select>
+        <Label text="AccountStatus"/>
+        <Input value=""/>
+        <Label text="AccountStatusDescription"/>
+        <Input value=""/>
+        <Label text="NetValueItem"/>
+        <Input value=""/>
+        <Label text="TaxValueItem"/>
+        <Input value=""/>
+        <Label text="GroValueItem"/>
+        <Input value=""/>
+        <Label text="Cancelled"/>
+        <Input value=""/>
+        <Label text="CancelledBillDc"/>
+        <Input value=""/>
+        <Label text="SDDocCatLong"/>
+        <Input value=""/>
+      </f:content>
+    </f:SimpleForm>
+    <buttons>
+      <Button text="Cancel" press="onAddCancelDocDialog"/>
+      <Button text="Add" press="onAddCancelDocDialog"/>
+    </buttons>
+  </Dialog>
+</core:FragmentDefinition>

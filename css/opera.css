@@ -1,0 +1,56 @@
+.sapUiUfdShellBackground,
+.sapUshellShellBackground,
+.sapMGlobalBackgroundColor {
+    background-image: linear-gradient(to bottom, #f2f2f2 0px, #f2f2f2 50%, #f2f2f2 100%) !important;
+}
+
+.sapMStdTileTitle {
+    color: #ffffff !important;
+}
+
+.sapMStdTileIconDiv {
+    color: #ffffff !important;
+}
+
+.sapMStdTileNum {
+    color: #ffffff !important;
+    font-size: 2.5rem !important;
+    margin-top: -0.5rem !important;
+}
+
+.sapMTileContent {
+    height: 9rem !important;
+    width: 9rem !important;
+    border-radius: 10px !important;
+    background-color: #457DAA !important;
+}
+
+.customHeaderBorder {
+    border-top: 0.25rem solid #457DAA !important;
+}
+
+.sapMPageHeader::before {
+    border-top: 0.25rem solid #457DAA !important;
+}
+
+.sapMPanelContent {
+    border-bottom: 1px solid #457DAA !important;
+}
+
+div.sapMBtnInner.sapMBtnEmphasized {
+    background-color: #84a1ae !important;
+}
+
+.sapUiRoadMapSelected>.sapUiRoadMapStepBox {
+    background-color: #457DAA !important;
+    border-color: #457DAA !important;
+    color: #000000 !important;
+}
+
+.sapUiTableCtrl tr.sapUiTableRowSel:not(.sapUiTableGroupHeader)>td {
+    background-color: #457DAA !important;
+}
+
+.sapUiTable .sapUiTableRowHdr.sapUiTableRowSel {
+    background-color: #457DAA !important;
+}
