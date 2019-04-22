@@ -44,7 +44,7 @@ sap.ui.define([
 				this._oPopover.openBy(oEvent.getSource());
 			},
 			onDevResume: function () {
-				window.open("https://drive.google.com/open?id=1Ztbevp6hhIyEf3oDjTbGIU0hK2Lx0mec");
+				window.open("https://drive.google.com/file/d/1o8yJa7XWsqlPl4Vb7-45g09nvy0PxcMI/view?usp=sharing");
 			}
 		});
 	});
