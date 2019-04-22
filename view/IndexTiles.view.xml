@@ -24,6 +24,7 @@
 					<TileContainer class="launchpad-margin-left" id="launchpadContainerDE" height="11rem">
 						<tiles>
 							<StandardTile id="DE1" icon="sap-icon://leads" title="{i18n>devResume}" press="onDevResume" />
+							<StandardTile id="DE2" icon="sap-icon://internet-browser" title="UI5 Web Components" press="onWebComponents" />
 						</tiles>
 					</TileContainer>
 					<!-- Admin -->
