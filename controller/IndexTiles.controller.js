@@ -47,7 +47,7 @@ sap.ui.define(["ems/UI5Showcase/controller/BaseController"], function(
     },
     onDevResume: function() {
       window.open(
-        "https://drive.google.com/open?id=1Ztbevp6hhIyEf3oDjTbGIU0hK2Lx0mec"
+        "https://drive.google.com/file/d/1o8yJa7XWsqlPl4Vb7-45g09nvy0PxcMI/view?usp=sharing"
       );
     },
     onWebComponents: function() {
