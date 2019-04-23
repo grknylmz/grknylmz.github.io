@@ -1,283 +1,265 @@
 {
-	"_version": "1.8.0",
-	"sap.app": {
-		"id": "ems.UI5Showcase",
-		"type": "application",
-		"i18n": "i18n/i18n.properties",
-		"applicationVersion": {
-			"version": "1.0.0"
-		},
-		"title": "{{appTitle}}",
-		"description": "{{appDescription}}",
-		"sourceTemplate": {
-			"id": "ui5template.basicSAPUI5ApplicationProject",
-			"version": "1.40.12"
-		},
-		"dataSources": {}
-	},
-	"sap.ui": {
-		"technology": "UI5",
-		"icons": {
-			"icon": "",
-			"favIcon": "",
-			"phone": "",
-			"phone@2": "",
-			"tablet": "",
-			"tablet@2": ""
-		},
-		"deviceTypes": {
-			"desktop": true,
-			"tablet": true,
-			"phone": true
-		},
-		"supportedThemes": [
-			"sap_hcb",
-			"sap_belize"
-		]
-	},
-	"sap.ui5": {
-		"rootView": {
-			"viewName": "ems.UI5Showcase.view.App",
-			"type": "XML",
-			"async": true,
-			"id": "app"
-		},
-		"dependencies": {
-			"minUI5Version": "1.30.0",
-			"libs": {
-				"sap.ui.layout": {},
-				"sap.ui.core": {},
-				"sap.m": {},
-				"sap.f": {},
-				"sap.uxap": {}
-			}
-		},
-		"contentDensities": {
-			"compact": true,
-			"cozy": true
-		},
-		"models": {
-			"i18n": {
-				"type": "sap.ui.model.resource.ResourceModel",
-				"settings": {
-					"bundleName": "ems.UI5Showcase.i18n.i18n"
-				}
-			},
-			"side": {
-				"type": "sap.ui.model.json.JSONModel",
-				"uri": "model/sideContent.json"
-			},
-			"alerts": {
-				"type": "sap.ui.model.json.JSONModel",
-				"uri": "model/alerts.json"
-			},
-			"products": {
-				"type": "sap.ui.model.json.JSONModel",
-				"uri": "model/product.json"
-			}
-		},
-		"resources": {
-			"css": [{
-					"uri": "css/style.css"
-				},
-				{
-					"uri": "css/customStyle.css"
-				},
-				{
-					"uri": "css/opera.css"
-				}
-			],
-			"js": [{
-				"uri": "libs/quagga.min.js",
-				"async": true
-			}, {
-				"uri": "libs/signature_pad.min.js",
-				"async": true
-			}, {
-				"uri": "libs/canvas-datagrid.js",
-				"async": true
-			}, {
-				"uri": "libs/xlsx.full.min.js",
-				"async": true
-			}]
-		},
-		"routing": {
-			"config": {
-				"routerClass": "sap.m.routing.Router",
-				"viewType": "XML",
-				"async": true,
-				"viewPath": "ems.UI5Showcase.view",
-				"controlAggregation": "pages",
-				"controlId": "app",
-				"clearControlAggregation": false,
-				"bypassed": {
-					"target": [
-						"notFound"
-					]
-				}
-			},
-			"routes": [{
-					"pattern": "",
-					"name": "indexTiles",
-					"target": [
-						"indexTiles"
-					]
-				},
-				{
-					"pattern": "vendors",
-					"name": "vendors",
-					"target": [
-						"vendors"
-					]
-				},
-				{
-					"pattern": "billingDocs",
-					"name": "billingDocs",
-					"target": [
-						"billingDocs"
-					]
-				},
-				{
-					"pattern": "businessAdmin",
-					"name": "businessAdmin",
-					"target": [
-						"businessAdmin"
-					]
-				},
-				{
-					"pattern": "glAccount",
-					"name": "glAccount",
-					"target": [
-						"glAccount"
-					]
-				},
-				{
-					"pattern": "customer",
-					"name": "customer",
-					"target": [
-						"customer"
-					]
-				}, {
-					"pattern": "barcodeScanner",
-					"name": "barcodeScanner",
-					"target": [
-						"barcodeScanner"
-					]
-				},
-				{
-					"pattern": "signaturePad",
-					"name": "signaturePad",
-					"target": [
-						"signaturePad"
-					]
-				},
-				{
-					"pattern": "messenger",
-					"name": "messenger",
-					"target": [
-						"messenger"
-					]
-				},
-				{
-					"pattern": "file",
-					"name": "file",
-					"target": [
-						"file"
-					]
-				}
-			],
-			"targets": {
-				"indexTiles": {
-					"viewName": "IndexTiles",
-					"viewId": "indexTiles",
-					"viewLevel": 1,
-					"routerClass": "sap.m.routing.Router",
-					"viewType": "XML",
-					"async": true,
-					"viewPath": "ems.UI5Showcase.view",
-					"controlAggregation": "pages",
-					"controlId": "app",
-					"clearControlAggregation": false
-				},
-				"vendors": {
-					"viewName": "vendors.Vendors",
-					"viewType": "XML",
-					"viewId": "vendors",
-					"viewLevel": 2,
-					"routerClass": "sap.m.routing.Router",
-					"async": true,
-					"viewPath": "ems.UI5Showcase.view",
-					"controlAggregation": "pages",
-					"controlId": "app",
-					"clearControlAggregation": false
-				},
-				"billingDocs": {
-					"viewName": "billing.BillingDocs",
-					"viewType": "XML",
-					"viewLevel": 2,
-					"controlId": "app",
-					"viewId": "billingDocs"
-				},
-				"businessAdmin": {
-					"viewName": "BusinessAdmin",
-					"viewType": "XML",
-					"viewLevel": 2,
-					"controlId": "app",
-					"viewId": "businessAdmin"
-				},
-				"glAccount": {
-					"viewName": "glAccount.GLAccount",
-					"viewType": "XML",
-					"viewLevel": 2,
-					"controlId": "app",
-					"viewId": "glAccount"
-				},
-				"customer": {
-					"viewName": "customers.Customer",
-					"viewType": "XML",
-					"viewLevel": 2,
-					"controlId": "app",
-					"viewId": "customer"
-				},
-				"barcodeScanner": {
-					"viewName": "barcode.BarcodeScanner",
-					"viewType": "XML",
-					"viewLevel": 2,
-					"viewId": "barcodeScanner"
-				},
-				"signaturePad": {
-					"viewName": "signature.SignaturePad",
-					"viewType": "XML",
-					"viewLevel": 2,
-					"viewId": "signaturePad"
-				},
-				"messenger": {
-					"viewName": "messenger.Messenger",
-					"viewType": "XML",
-					"viewLevel": 2,
-					"viewId": "messenger"
-				},
-				"file": {
-					"viewName": "file.File",
-					"viewType": "XML",
-					"viewLevel": 2,
-					"viewId": "file"
-				},
-				"notFound": {
-					"viewType": "XML",
-					"viewName": "NotFound"
-				}
-
-			}
-		},
-		"config": {
-			"sapFiori2Adaptation": {
-				"style": false,
-				"collapse": false,
-				"title": true,
-				"back": true,
-				"hierarchy": true
-			}
-		}
-	}
+  "_version": "1.8.0",
+  "sap.app": {
+    "id": "ems.UI5Showcase",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "sourceTemplate": {
+      "id": "ui5template.basicSAPUI5ApplicationProject",
+      "version": "1.40.12"
+    },
+    "dataSources": {}
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "supportedThemes": ["sap_hcb", "sap_belize"]
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "ems.UI5Showcase.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.30.0",
+      "libs": {
+        "sap.ui.layout": {},
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.f": {},
+        "sap.uxap": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ems.UI5Showcase.i18n.i18n"
+        }
+      },
+      "side": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/sideContent.json"
+      },
+      "alerts": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/alerts.json"
+      },
+      "products": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/product.json"
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        },
+        {
+          "uri": "css/customStyle.css"
+        },
+        {
+          "uri": "css/opera.css"
+        }
+      ],
+      "js": [
+        {
+          "uri": "libs/quagga.min.js",
+          "async": true
+        },
+        {
+          "uri": "libs/signature_pad.min.js",
+          "async": true
+        },
+        {
+          "uri": "libs/canvas-datagrid.js",
+          "async": true
+        },
+        {
+          "uri": "libs/xlsx.full.min.js",
+          "async": true
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "ems.UI5Showcase.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false,
+        "bypassed": {
+          "target": ["notFound"]
+        }
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "indexTiles",
+          "target": ["indexTiles"]
+        },
+        {
+          "pattern": "vendors",
+          "name": "vendors",
+          "target": ["vendors"]
+        },
+        {
+          "pattern": "billingDocs",
+          "name": "billingDocs",
+          "target": ["billingDocs"]
+        },
+        {
+          "pattern": "businessAdmin",
+          "name": "businessAdmin",
+          "target": ["businessAdmin"]
+        },
+        {
+          "pattern": "glAccount",
+          "name": "glAccount",
+          "target": ["glAccount"]
+        },
+        {
+          "pattern": "customer",
+          "name": "customer",
+          "target": ["customer"]
+        },
+        {
+          "pattern": "barcodeScanner",
+          "name": "barcodeScanner",
+          "target": ["barcodeScanner"]
+        },
+        {
+          "pattern": "signaturePad",
+          "name": "signaturePad",
+          "target": ["signaturePad"]
+        },
+        {
+          "pattern": "messenger",
+          "name": "messenger",
+          "target": ["messenger"]
+        },
+        {
+          "pattern": "file",
+          "name": "file",
+          "target": ["file"]
+        }
+      ],
+      "targets": {
+        "indexTiles": {
+          "viewName": "IndexTiles",
+          "viewId": "indexTiles",
+          "viewLevel": 1,
+          "routerClass": "sap.m.routing.Router",
+          "viewType": "XML",
+          "async": true,
+          "viewPath": "ems.UI5Showcase.view",
+          "controlAggregation": "pages",
+          "controlId": "app",
+          "clearControlAggregation": false
+        },
+        "vendors": {
+          "viewName": "vendors.Vendors",
+          "viewType": "XML",
+          "viewId": "vendors",
+          "viewLevel": 2,
+          "routerClass": "sap.m.routing.Router",
+          "async": true,
+          "viewPath": "ems.UI5Showcase.view",
+          "controlAggregation": "pages",
+          "controlId": "app",
+          "clearControlAggregation": false
+        },
+        "billingDocs": {
+          "viewName": "billing.BillingDocs",
+          "viewType": "XML",
+          "viewLevel": 2,
+          "controlId": "app",
+          "viewId": "billingDocs"
+        },
+        "businessAdmin": {
+          "viewName": "BusinessAdmin",
+          "viewType": "XML",
+          "viewLevel": 2,
+          "controlId": "app",
+          "viewId": "businessAdmin"
+        },
+        "glAccount": {
+          "viewName": "glAccount.GLAccount",
+          "viewType": "XML",
+          "viewLevel": 2,
+          "controlId": "app",
+          "viewId": "glAccount"
+        },
+        "customer": {
+          "viewName": "customers.Customer",
+          "viewType": "XML",
+          "viewLevel": 2,
+          "controlId": "app",
+          "viewId": "customer"
+        },
+        "barcodeScanner": {
+          "viewName": "barcode.BarcodeScanner",
+          "viewType": "XML",
+          "viewLevel": 2,
+          "viewId": "barcodeScanner"
+        },
+        "signaturePad": {
+          "viewName": "signature.SignaturePad",
+          "viewType": "XML",
+          "viewLevel": 2,
+          "viewId": "signaturePad"
+        },
+        "messenger": {
+          "viewName": "messenger.Messenger",
+          "viewType": "XML",
+          "viewLevel": 2,
+          "viewId": "messenger"
+        },
+        "file": {
+          "viewName": "file.File",
+          "viewType": "XML",
+          "viewLevel": 2,
+          "viewId": "file"
+        },
+        "notFound": {
+          "viewType": "XML",
+          "viewName": "NotFound"
+        }
+      }
+    },
+    "config": {
+      "sapFiori2Adaptation": {
+        "style": false,
+        "collapse": false,
+        "title": true,
+        "back": true,
+        "hierarchy": true
+      }
+    }
+  }
 }
