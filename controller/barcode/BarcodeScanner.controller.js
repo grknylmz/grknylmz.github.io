@@ -71,9 +71,23 @@ sap.ui.define([
             }
           },
           locator: {
-            patchSize: "medium",
-            halfSample: true
-          },
+								patchSize: "medium",
+								halfSample: true,
+								debug: {
+									showCanvas: true,
+									showPatches: true,
+									showFoundPatches: true,
+									showSkeleton: true,
+									showLabels: true,
+									showPatchLabels: true,
+									showRemainingPatchLabels: true,
+									boxFromPatches: {
+										showTransformed: true,
+										showTransformedBox: true,
+										showBB: true
+									}
+								}
+							},
           numOfWorkers: 2,
           frequency: 10,
           decoder: {
